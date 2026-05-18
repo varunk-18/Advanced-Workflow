@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Title -->
+    <title>Advanced Workflow</title>
+    <!-- meta-description -->
+    <meta name="description" content="">
+    <!-- font-awesome-link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Montserrat-font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap-5.0.2-link -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <!--style.css-link-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- favicon-link -->
+    <link rel="icon" type="image/x-icon" href="assets/image/favicon.svg">
+</head>
+
+<body>
+    <!-- aside-wrapper-start -->
+    <aside class="aside_wrapper">
+        <div class="aside_top">
+            <div class="head_box">
+                <a href="#" class="navbar_brand">
+                    <img src="assets/image/logo.svg" class="img-fluid" alt="sit-logo">
+                </a>
+                <span class="toggle_btn">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2.25 8.25C2.25 5.42157 2.25 4.00736 3.12868 3.12868C4.00736 2.25 5.42157 2.25 8.25 2.25H9.75C12.5784 2.25 13.9927 2.25 14.8713 3.12868C15.75 4.00736 15.75 5.42157 15.75 8.25V9.75C15.75 12.5784 15.75 13.9927 14.8713 14.8713C13.9927 15.75 12.5784 15.75 9.75 15.75H8.25C5.42157 15.75 4.00736 15.75 3.12868 14.8713C2.25 13.9927 2.25 12.5784 2.25 9.75V8.25Z"
+                            stroke="#5E5873" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M11.25 2.25V15.75" stroke="#5E5873" stroke-width="1.125" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M6 6.75L6.83114 7.40901C7.77705 8.15903 8.25 8.53403 8.25 9C8.25 9.46597 7.77705 9.84097 6.83114 10.591L6 11.25"
+                            stroke="#5E5873" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </span>
+            </div>
+            <ul class="nav nav_list">
+                <li class="nav-item">
+                    <a class="nav-link active" href="campaign.html">
+                        <span class="link_icon">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.5 13.5C15.1569 13.5 16.5 10.8137 16.5 7.5C16.5 4.18629 15.1569 1.5 13.5 1.5C11.8431 1.5 10.5 4.18629 10.5 7.5C10.5 10.8137 11.8431 13.5 13.5 13.5Z"
+                                    stroke="#5E5873" stroke-width="1.125" />
+                                <path
+                                    d="M13.5 1.5C11.1727 1.5 6.34884 3.28321 3.57829 4.39029C2.30956 4.89726 1.5 6.13374 1.5 7.5C1.5 8.86627 2.30956 10.1027 3.57829 10.6097C6.34884 11.7168 11.1727 13.5 13.5 13.5"
+                                    stroke="#5E5873" stroke-width="1.125" />
+                                <path d="M8.25 16.5L6.79255 15.6977C5.20573 14.8243 4.3099 13.06 4.5341 11.25"
+                                    stroke="#5E5873" stroke-width="1.125" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                        </span>
+                        <span class="link_text">
+                            Campaign
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="aside_bottom">
+            <div class="profile_box">
+                <div class="profile_head">
+                    <div class="profile_detail">
+                        <figure class="mb-0 profile_img">
+                            <img src="assets/image/profile-img.png" class="img-fluid img_cover" alt="profile-image">
+                            <span class="status_icon online"></span>
+                        </figure>
+                        <div class="profile_content">
+                            <h3 class="profile_name">John Doe</h3>
+                            <p class="profile_text">Admin</p>
+                        </div>
+                    </div>
+                    <a href="" class="logout-btn">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.4129 5.13638C12.3731 4.20034 12.2543 3.60389 11.9014 3.14496C11.7646 2.96688 11.6049 2.80748 11.4264 2.67083C10.7334 2.14014 9.72746 2.14014 7.71558 2.14014H7.28667C4.86059 2.14014 3.64755 2.14014 2.89385 2.89234C2.14017 3.64454 2.14015 4.85522 2.14015 7.27653L2.14014 13.269C2.14013 15.6903 2.14012 16.901 2.89382 17.6532C3.64751 18.4054 4.86056 18.4054 7.28667 18.4054H7.71553C9.72746 18.4054 10.7334 18.4054 11.4264 17.8748C11.6048 17.7381 11.7646 17.5787 11.9014 17.4007C12.2543 16.9417 12.3731 16.3451 12.4129 15.4089"
+                                stroke="#141B34" stroke-width="1.2841" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M17.5492 10.2728H7.27637M15.409 13.2691C15.409 13.2691 18.4052 11.0624 18.4052 10.2729C18.4052 9.4833 15.409 7.27661 15.409 7.27661"
+                                stroke="#141B34" stroke-width="1.2841" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="profile_content">
+                    <p class="profile_text">Email</p>
+                    <a href="mailto:johndoe@gmail.com" class="profile_name">johndoe@gmail.com</a>
+                </div>
+            </div>
+            <div class="theme_box">
+                <div class="theme_icon theme_icon_light">
+                    <span class="btn_icon">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.5529 10.2729C14.5529 12.6368 12.6365 14.5532 10.2725 14.5532C7.90857 14.5532 5.99219 12.6368 5.99219 10.2729C5.99219 7.90893 7.90857 5.99255 10.2725 5.99255C12.6365 5.99255 14.5529 7.90893 14.5529 10.2729Z"
+                                stroke="#52687E" stroke-width="1.2841" />
+                            <path
+                                d="M10.2726 1.71228V2.99638M10.2726 17.5496V18.8337M16.3257 16.3265L15.4177 15.4185M5.127 5.12736L4.219 4.21936M18.8333 10.273H17.5492M2.99602 10.273H1.71191M16.3261 4.21946L15.4181 5.12746M5.12741 15.4185L4.21942 16.3266"
+                                stroke="#52687E" stroke-width="1.2841" stroke-linecap="round" />
+                        </svg>
+                    </span>
+                    <span class="btn_text">Light</span>
+                </div>
+                <div class="theme_icon theme_icon_dark">
+                    <span class="btn_icon">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18.4054 12.052C17.3784 12.6004 16.2054 12.9113 14.9599 12.9113C10.9141 12.9113 7.63432 9.63151 7.63432 5.58569C7.63432 4.34011 7.94518 3.16715 8.49356 2.14014C4.85186 2.99362 2.14014 6.26222 2.14014 10.1642C2.14014 14.7157 5.82988 18.4054 10.3814 18.4054C14.2834 18.4054 17.5519 15.6938 18.4054 12.052Z"
+                                stroke="#52687E" stroke-width="1.2841" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </span>
+                    <span class="btn_text">Dark</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- aside-wrapper-end -->
+
+    <!-- main-wrapper-start -->
+    <main class="main_wrapper">
+        <!-- header-start -->
+        <header class="header">
+            <div class="header_left">
+                <div class="toggler_btn d-lg-none">
+                    <span class="toggle_icon"></span>
+                    <span class="toggle_icon"></span>
+                    <span class="toggle_icon"></span>
+                </div>
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="campaign.html">
+                            Campaign
+                        </a>
+                    </li>
+                    <li> Advance Campaign</li>
+                </ul>
+            </div>
+            <div class="header_right">
+                <div class="profile_detail">
+                    <div class="profile_content text-end">
+                        <h3 class="profile_name">John Doe</h3>
+                        <p class="profile_text">Admin</p>
+                    </div>
+                    <figure class="mb-0 profile_img">
+                        <img src="assets/image/profile-img.png" class="img-fluid img_cover" alt="profile-image">
+                        <span class="status_icon online"></span>
+                    </figure>
+                </div>
+            </div>
+        </header>
+        <!-- header-end -->
+        <!-- content-wrapper-start -->
+        <section class="content_wrapper">
+            <form id="msform">
+                <!-- progressbar -->
+                <ul id="progressbar">
+                    <li class="progessbar_list active">
+                        <span class="list_icon">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.25 4.5H15.75" stroke="#5E5873" stroke-width="1.125"
+                                    stroke-linecap="round" />
+                                <path d="M8.25 9H15.75" stroke="#5E5873" stroke-width="1.125" stroke-linecap="round" />
+                                <path d="M8.25 13.5H15.75" stroke="#5E5873" stroke-width="1.125"
+                                    stroke-linecap="round" />
+                                <path d="M2.25 5.54464C2.25 5.54464 3 6.03349 3.375 6.75C3.375 6.75 4.5 3.9375 6 3"
+                                    stroke="#5E5873" stroke-width="1.125" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M2.25 13.7947C2.25 13.7947 3 14.2835 3.375 15C3.375 15 4.5 12.1875 6 11.25"
+                                    stroke="#5E5873" stroke-width="1.125" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="list_text">Define Target Audience</span>
+                    </li>
+                    <li class="progessbar_list">
+                        <span class="list_icon">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.25 5.625C11.25 3.55393 9.57105 1.875 7.5 1.875C5.42893 1.875 3.75 3.55393 3.75 5.625C3.75 7.69605 5.42893 9.375 7.5 9.375C9.57105 9.375 11.25 7.69605 11.25 5.625Z"
+                                    stroke="#5E5873" stroke-width="1.125" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M2.25 14.625C2.25 11.7255 4.60051 9.375 7.5 9.375C8.3052 9.375 9.06802 9.55628 9.75 9.8802"
+                                    stroke="#5E5873" stroke-width="1.125" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                        </span>
+                        <span class="list_text">Sender Profiles</span>
+                    </li>
+                    <li class="progessbar_list">
+                        <span class="list_icon">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15.9881 5.35604L15.6179 4.71359C15.3379 4.22772 15.198 3.98479 14.9598 3.88791C14.7216 3.79104 14.4522 3.86748 13.9135 4.02036L12.9983 4.27814C12.6544 4.35746 12.2935 4.31246 11.9794 4.15109L11.7268 4.00532C11.4574 3.83282 11.2503 3.5785 11.1356 3.27956L10.8852 2.53152C10.7205 2.03651 10.6381 1.789 10.4421 1.64743C10.2461 1.50586 9.98572 1.50586 9.46492 1.50586H8.62882C8.1081 1.50586 7.8477 1.50586 7.65165 1.64743C7.45564 1.789 7.37329 2.03651 7.20862 2.53152L6.95815 3.27956C6.84349 3.5785 6.63634 3.83282 6.36703 4.00532L6.11437 4.15109C5.8003 4.31246 5.43944 4.35746 5.09548 4.27814L4.18031 4.02036C3.64156 3.86748 3.37219 3.79104 3.134 3.88791C2.89582 3.98479 2.75584 4.22772 2.47586 4.71359L2.10568 5.35604C1.84324 5.81148 1.71202 6.0392 1.73749 6.28162C1.76296 6.52403 1.93862 6.71939 2.28994 7.11009L3.06322 7.9746C3.25222 8.21385 3.38641 8.63085 3.38641 9.00578C3.38641 9.38085 3.25227 9.7977 3.06325 10.037L2.28994 10.9016C1.93862 11.2923 1.76296 11.4876 1.73749 11.7301C1.71202 11.9725 1.84324 12.2002 2.10568 12.6556L2.47585 13.298C2.75582 13.7839 2.89582 14.0269 3.134 14.1237C3.37219 14.2206 3.64156 14.1442 4.18033 13.9913L5.09545 13.7335C5.43947 13.6541 5.8004 13.6992 6.1145 13.8606L6.36712 14.0064C6.63638 14.1789 6.84348 14.4332 6.95812 14.7321L7.20862 15.4802C7.37329 15.9752 7.45564 16.2227 7.65165 16.3643C7.8477 16.5059 8.1081 16.5059 8.62882 16.5059H9.46492C9.98572 16.5059 10.2461 16.5059 10.4421 16.3643C10.6381 16.2227 10.7205 15.9752 10.8852 15.4802L11.1357 14.7321C11.2503 14.4332 11.4574 14.1789 11.7267 14.0064L11.9793 13.8606C12.2934 13.6992 12.6543 13.6541 12.9983 13.7335L13.9135 13.9913C14.4522 14.1442 14.7216 14.2206 14.9598 14.1237C15.198 14.0269 15.3379 13.7839 15.6179 13.298L15.9881 12.6556C16.2505 12.2002 16.3817 11.9725 16.3563 11.7301C16.3308 11.4876 16.1551 11.2923 15.8038 10.9016L15.0305 10.037C14.8415 9.7977 14.7073 9.38085 14.7073 9.00578C14.7073 8.63085 14.8416 8.21385 15.0305 7.9746L15.8038 7.11009C16.1551 6.71939 16.3308 6.52403 16.3563 6.28162C16.3817 6.0392 16.2505 5.81148 15.9881 5.35604Z"
+                                    stroke="#5E5873" stroke-width="1.125" stroke-linecap="round" />
+                                <path
+                                    d="M11.6406 9C11.6406 10.4497 10.4654 11.625 9.0156 11.625C7.56585 11.625 6.39062 10.4497 6.39062 9C6.39062 7.55025 7.56585 6.375 9.0156 6.375C10.4654 6.375 11.6406 7.55025 11.6406 9Z"
+                                    stroke="#5E5873" stroke-width="1.125" />
+                            </svg>
+
+                        </span>
+                        <span class="list_text">Settings</span>
+                    </li>
+                    <li class="progessbar_list">
+                        <span class="list_icon">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.875 8.99998C1.875 5.64124 1.875 3.96186 2.91843 2.91843C3.96187 1.875 5.64124 1.875 9 1.875C12.3587 1.875 14.0381 1.875 15.0816 2.91843C16.125 3.96186 16.125 5.64124 16.125 8.99998C16.125 12.3588 16.125 14.0381 15.0816 15.0816C14.0381 16.125 12.3587 16.125 9 16.125C5.64124 16.125 3.96187 16.125 2.91843 15.0816C1.875 14.0381 1.875 12.3588 1.875 8.99998Z"
+                                    stroke="#5E5873" stroke-width="1.125" />
+                                <path d="M1.875 6.75H16.125" stroke="#5E5873" stroke-width="1.125"
+                                    stroke-linejoin="round" />
+                                <path d="M5.25 4.5H5.25673" stroke="#5E5873" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M8.25 4.5H8.25675" stroke="#5E5873" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12.75 12.75C12.75 10.679 11.071 9 9 9C6.92893 9 5.25 10.679 5.25 12.75"
+                                    stroke="#5E5873" stroke-width="1.125" stroke-linecap="round" />
+                                <path d="M9.5294 11.4688L8.46875 12.5294" stroke="#5E5873" stroke-width="1.125"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </span>
+                        <span class="list_text">Stats</span>
+                    </li>
+                </ul>
+                <fieldset class="csmt_fieldset">
+                    <div class="field_box">
+                        <div class="field_item">
+                            <a href="#i_method" class="collapse_btn" data-bs-toggle="collapse">
+                                <span class="link_text">Choose Import Method</span>
+                                <span class="link_icon"><i class="fa-solid fa-chevron-up"></i></span>
+                            </a>
+                            <div id="i_method" class="collapse collapse_box show">
+                                <div class="collapse_grid">
+                                    <div class="grid_boxItem">
+                                        <input type="radio" name="_import_method" class="form-check-input"
+                                            aria-expanded="true">
+                                        <div class="grid_content">
+                                            <span class="checkImg"><i class="fa-solid fa-check"></i></span>
+                                            <span class="box-icon">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5.25 7.5V12.75" stroke="#334155" stroke-width="1.125"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M8.25 9.75V12.75M8.25 9.75C8.25 8.50732 9.25732 7.5 10.5 7.5C11.7427 7.5 12.75 8.50732 12.75 9.75V12.75M8.25 9.75V7.5"
+                                                        stroke="#334155" stroke-width="1.125" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M5.25577 5.25H5.24902" stroke="#334155" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M1.875 9C1.875 5.64124 1.875 3.96187 2.91843 2.91843C3.96187 1.875 5.64124 1.875 9 1.875C12.3587 1.875 14.0381 1.875 15.0816 2.91843C16.125 3.96187 16.125 5.64124 16.125 9C16.125 12.3587 16.125 14.0381 15.0816 15.0816C14.0381 16.125 12.3587 16.125 9 16.125C5.64124 16.125 3.96187 16.125 2.91843 15.0816C1.875 14.0381 1.875 12.3587 1.875 9Z"
+                                                        stroke="#334155" stroke-width="1.125" stroke-linejoin="round" />
+                                                </svg>
+
+                                            </span>
+                                            <h5 class="box_heading">LinkedIn
+                                                Search</h5>
+                                            <p>(Basic, Sales Nav, Post,
+                                                Group or Event URL)</p>
+                                        </div>
+                                    </div>
+                                    <div class="grid_boxItem">
+                                        <input type="radio" name="_import_method" class="form-check-input"
+                                            aria-expanded="true">
+                                        <div class="grid_content">
+                                            <span class="checkImg"><i class="fa-solid fa-check"></i></span>
+                                            <span class="box-icon">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 1.5V4.5M6 1.5V4.5" stroke="#334155"
+                                                        stroke-width="1.125" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M9.75 3H8.25C5.42157 3 4.00736 3 3.12868 3.87868C2.25 4.75736 2.25 6.17157 2.25 9V10.5C2.25 13.3284 2.25 14.7427 3.12868 15.6213C4.00736 16.5 5.42157 16.5 8.25 16.5H9.75C12.5784 16.5 13.9927 16.5 14.8713 15.6213C15.75 14.7427 15.75 13.3284 15.75 10.5V9C15.75 6.17157 15.75 4.75736 14.8713 3.87868C13.9927 3 12.5784 3 9.75 3Z"
+                                                        stroke="#334155" stroke-width="1.125" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M2.25 7.5H15.75" stroke="#334155" stroke-width="1.125"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+
+                                            </span>
+                                            <h5 class="box_heading">Upload
+                                                CSV File</h5>
+                                            <p>Upload LinkedIn profiles via CSV. <a href="" class="box_link">Download
+                                                    Sample</a> </p>
+                                        </div>
+                                    </div>
+                                    <div class="grid_boxItem" data-bs-toggle="modal" data-bs-target="#look_like">
+                                        <input type="radio" name="_import_method" class="form-check-input"
+                                            aria-expanded="true">
+                                        <div class="grid_content">
+                                            <span class="checkImg"><i class="fa-solid fa-check"></i></span>
+                                            <span class="box-icon">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M10.5 6.375C10.5 4.30393 8.82105 2.625 6.75 2.625C4.67893 2.625 3 4.30393 3 6.375C3 8.44605 4.67893 10.125 6.75 10.125C8.82105 10.125 10.5 8.44605 10.5 6.375Z"
+                                                        stroke="#334155" stroke-width="1.125" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M12 15.375C12 12.4755 9.6495 10.125 6.75 10.125C3.85051 10.125 1.5 12.4755 1.5 15.375"
+                                                        stroke="#334155" stroke-width="1.125" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M12.75 7.5H16.5" stroke="#334155" stroke-width="1.125"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M12.75 9.75H16.5" stroke="#334155" stroke-width="1.125"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M15 12H16.5" stroke="#334155" stroke-width="1.125"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+
+                                            </span>
+                                            <h5 class="box_heading">Lookalike
+                                                Audience</h5>
+                                            <p>Use Lead Finder to find audience.</p>
+                                        </div>
+                                    </div>
+                                    <div class="grid_boxItem">
+                                        <input type="radio" name="_import_method" class="form-check-input"
+                                            aria-expanded="true">
+                                        <div class="grid_content">
+                                            <span class="checkImg"><i class="fa-solid fa-check"></i></span>
+                                            <span class="box-icon">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5.25 7.5V12.75" stroke="#334155" stroke-width="1.125"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M8.25 9.75V12.75M8.25 9.75C8.25 8.50732 9.25732 7.5 10.5 7.5C11.7427 7.5 12.75 8.50732 12.75 9.75V12.75M8.25 9.75V7.5"
+                                                        stroke="#334155" stroke-width="1.125" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M5.25577 5.25H5.24902" stroke="#334155" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M1.875 9C1.875 5.64124 1.875 3.96187 2.91843 2.91843C3.96187 1.875 5.64124 1.875 9 1.875C12.3587 1.875 14.0381 1.875 15.0816 2.91843C16.125 3.96187 16.125 5.64124 16.125 9C16.125 12.3587 16.125 14.0381 15.0816 15.0816C14.0381 16.125 12.3587 16.125 9 16.125C5.64124 16.125 3.96187 16.125 2.91843 15.0816C1.875 14.0381 1.875 12.3587 1.875 9Z"
+                                                        stroke="#334155" stroke-width="1.125" stroke-linejoin="round" />
+                                                </svg>
+
+                                            </span>
+                                            <h5 class="box_heading">Inbound Webhook </h5>
+                                            <p>Sync leads from zapier, n8n make in real time</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="next btn_secondary ms-auto">Next</div>
+                </fieldset>
+                <fieldset class="csmt_fieldset">
+                    <div class="field_box ps-0">
+                        <!-- Nav pills -->
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="pill" href="#link_din">LinkedIn Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="pill" href="#email_acc">Email Accounts</a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="link_din">
+                                <div class="tab_box">
+                                    <div class="tab_head">
+                                        <div class="head-left">
+                                            <h3 class="tab_heading">
+                                                <span class="heading_icon"><i
+                                                        class="fa-brands fa-linkedin"></i></span>LinkedIn Profile
+                                            </h3>
+                                            <p>Pick which LinkedIn profiles you want to use for this campaign.</p>
+                                        </div>
+                                        <a href="" class="btn_secondary">
+                                            <span class="btn_icon">+</span>
+                                            <span class="btn_text">Add Account</span>
+                                        </a>
+                                    </div>
+                                    <div class="mid_tab">
+                                        <div class="form-group">
+                                            <label for="sh_ow">Show</label>
+                                            <select name="_value" id="sh_ow" class="form-select">
+                                                <option value="all">10</option>
+                                                <option value="all">11</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-text">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.75 12.75L15.75 15.75" stroke="#5E5873"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M14.25 8.25C14.25 4.93629 11.5637 2.25 8.25 2.25C4.93629 2.25 2.25 4.93629 2.25 8.25C2.25 11.5637 4.93629 14.25 8.25 14.25C11.5637 14.25 14.25 11.5637 14.25 8.25Z"
+                                                        stroke="#5E5873" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </span>
+                                            <input type="search" class="form-control" placeholder="Search">
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive csmt_table">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <input type="checkbox" class="form-check-input">
+                                                    </th>
+                                                    <th>Name</th>
+                                                    <th>Health</th>
+                                                    <th>Daily Limits</th>
+                                                    <th>Account type</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" class="form-check-input">
+                                                    </td>
+                                                    <td>
+                                                        <div class="user_detail">
+                                                            <figure class="user_img mb-0">
+                                                                <img src="assets/image/userimg.png"
+                                                                    class="img-fluid img_cover" alt="user-img">
+                                                            </figure>
+                                                            <div class="user_content">
+                                                                <h5 class="user_name">Edgar Jones</h5>
+                                                                <p>1,250 connections</p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="bar_img">
+                                                            <img src="assets/image/bar.png" class="img-fluid img_cover"
+                                                                alt="bar-image">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <span class="limit_text">Invites: 40 / day</span>
+                                                    </td>
+                                                    <td>
+                                                        <h6 class="accout_heading">
+                                                            <span class="heading_icon"><i
+                                                                    class="fa-brands fa-linkedin"></i></span>
+                                                            Premium
+                                                        </h6>
+                                                    </td>
+                                                    <td>
+                                                        <span class="conection_badge connection">Connected</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="email_acc">...</div>
+                        </div>
+                    </div>
+                    <div class="previous previous_btn ms-auto">
+                        <span class="btn_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.10431 2.625H9.38565C11.1979 2.625 12.667 4.09411 12.667 5.90634C12.667 7.71859 11.1979 9.18768 9.38565 9.18768H1"
+                                    stroke="#3666EE" stroke-width="1.09378" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M3.18755 7C3.18755 7 1.00001 8.61114 1 9.18756C0.999993 9.76406 3.18756 11.3751 3.18756 11.3751"
+                                    stroke="#3666EE" stroke-width="1.09378" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="btn_text ">Previous</span>
+                    </div>
+                    <div class="next btn_secondary">next</div>
+                </fieldset>
+                <fieldset class="csmt_fieldset">
+                    <div class="field_box ps-0">
+                        <div class="setting_box">
+                            <div class="setting_inner">
+                                <div class="form-group">
+                                    <label for="cam_name" class="csmt_lable">Campaign name</label>
+                                    <input type="text" class="form-control" id="cam_name" value="New Outreach Campaign">
+                                </div>
+                                <div class="sending_box">
+                                    <div class="head_box">
+                                        <h4 class="csmt_lable">Sending Window</h4>
+                                        <p>Define when the campaign runs</p>
+                                    </div>
+                                    <div class="row g-3">
+                                        <div class="col-12 col-lg-6">
+                                            <div class="left_column">
+                                                <div class="form_field">
+                                                    <div class="form-group">
+                                                        <select class="form-select">
+                                                            <option value="USA Outreach Time">USA Outreach Time</option>
+                                                            <option value="USA Outreach Time">USA Outreach Time</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="csmt_checkbox">
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input"
+                                                                aria-expanded="true" checked>
+                                                            <label class="check_lable">Mon</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input"
+                                                                aria-expanded="true" checked>
+                                                            <label class="check_lable">Tue</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input"
+                                                                aria-expanded="true" checked>
+                                                            <label class="check_lable">Wed</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input"
+                                                                aria-expanded="true" checked>
+                                                            <label class="check_lable">Thu</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input"
+                                                                aria-expanded="true">
+                                                            <label class="check_lable">Fri</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input"
+                                                                aria-expanded="true" checked>
+                                                            <label class="check_lable">Sat</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input"
+                                                                aria-expanded="true">
+                                                            <label class="check_lable">Sun</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input"
+                                                                aria-expanded="true">
+                                                            <label class="check_lable">
+                                                                <svg width="18" height="18" viewBox="0 0 18 18"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M14.625 4.125L14.1602 11.6438C14.0414 13.5648 13.9821 14.5253 13.5006 15.2159C13.2625 15.5573 12.956 15.8455 12.6005 16.062C11.8816 16.5 10.9192 16.5 8.99452 16.5C7.06734 16.5 6.10372 16.5 5.38429 16.0612C5.0286 15.8443 4.722 15.5556 4.48401 15.2136C4.00266 14.5219 3.94459 13.5601 3.82846 11.6364L3.375 4.125"
+                                                                        stroke="#334155" stroke-width="1.125"
+                                                                        stroke-linecap="round" />
+                                                                    <path
+                                                                        d="M2.25 4.125H15.75M12.0418 4.125L11.5298 3.0688C11.1897 2.3672 11.0196 2.01639 10.7263 1.79761C10.6612 1.74908 10.5923 1.7059 10.5203 1.66852C10.1954 1.5 9.80558 1.5 9.02588 1.5C8.2266 1.5 7.827 1.5 7.49676 1.67559C7.42357 1.71451 7.35373 1.75943 7.28797 1.80988C6.99123 2.03753 6.82547 2.40116 6.49396 3.12844L6.03969 4.125"
+                                                                        stroke="#334155" stroke-width="1.125"
+                                                                        stroke-linecap="round" />
+                                                                    <path d="M7.125 12.375V7.875" stroke="#334155"
+                                                                        stroke-width="1.125" stroke-linecap="round" />
+                                                                    <path d="M10.875 12.375V7.875" stroke="#334155"
+                                                                        stroke-width="1.125" stroke-linecap="round" />
+                                                                </svg>
+
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_flex">
+                                                        <div class="form-group">
+                                                            <input type="time" class="form-control">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control"
+                                                                value="USA Timezone">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="add_btn">
+                                                    <span class="btn_icon">+</span>
+                                                    <span class="btn_text">Add New Window</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="ryt_column">
+                                                <div class="colum_head">
+                                                    <div class="left_box">
+                                                        <h4 class="box_heading">
+                                                            <span class="heading_icon">
+                                                                <svg width="18" height="18" viewBox="0 0 18 18"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M14.25 12V10.5C14.25 8.3787 14.25 7.31802 13.591 6.65901C12.9319 6 11.8713 6 9.75 6H8.25C6.12868 6 5.06802 6 4.40901 6.65901C3.75 7.31802 3.75 8.3787 3.75 10.5V12C3.75 14.1213 3.75 15.1819 4.40901 15.841C5.06802 16.5 6.12868 16.5 8.25 16.5H9.75C11.8713 16.5 12.9319 16.5 13.591 15.841C14.25 15.1819 14.25 14.1213 14.25 12Z"
+                                                                        stroke="white" stroke-width="1.125"
+                                                                        stroke-linejoin="round" />
+                                                                    <path
+                                                                        d="M14.25 13.5C15.3106 13.5 15.841 13.5 16.1705 13.1705C16.5 12.841 16.5 12.3106 16.5 11.25C16.5 10.1894 16.5 9.65902 16.1705 9.32947C15.841 9 15.3106 9 14.25 9"
+                                                                        stroke="white" stroke-width="1.125"
+                                                                        stroke-linejoin="round" />
+                                                                    <path
+                                                                        d="M3.75 13.5C2.68934 13.5 2.15901 13.5 1.82951 13.1705C1.5 12.841 1.5 12.3106 1.5 11.25C1.5 10.1894 1.5 9.65902 1.82951 9.32947C2.15901 9 2.68934 9 3.75 9"
+                                                                        stroke="white" stroke-width="1.125"
+                                                                        stroke-linejoin="round" />
+                                                                    <path
+                                                                        d="M10.125 2.625C10.125 3.24632 9.6213 3.75 9 3.75C8.3787 3.75 7.875 3.24632 7.875 2.625C7.875 2.00368 8.3787 1.5 9 1.5C9.6213 1.5 10.125 2.00368 10.125 2.625Z"
+                                                                        stroke="white" stroke-width="1.125" />
+                                                                    <path d="M9 3.75V6" stroke="white"
+                                                                        stroke-width="1.125" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <path d="M6.75 9.75V10.5" stroke="white"
+                                                                        stroke-width="1.125" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <path d="M11.25 9.75V10.5" stroke="white"
+                                                                        stroke-width="1.125" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                    <path
+                                                                        d="M7.5 13.125C7.5 13.125 8.00003 13.5 9 13.5C9.99997 13.5 10.5 13.125 10.5 13.125"
+                                                                        stroke="white" stroke-width="1.125"
+                                                                        stroke-linecap="round" />
+                                                                </svg>
+
+                                                            </span>
+                                                            <strong>AI Assist</strong>
+                                                            Optional
+                                                        </h4>
+                                                        <p>Define when the campaign runs</p>
+                                                    </div>
+                                                    <a href="" class="btn_secondary">Train AI</a>
+                                                </div>
+                                                <div class="assit_box">
+                                                    <div class="assit_item">
+                                                        <span class="assit_icon">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M6.375 10.875H11.625M6.375 7.125H9"
+                                                                    stroke="#3666EE" stroke-width="1.125"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path
+                                                                    d="M10.6279 15.6679C13.7652 15.4594 16.2642 12.9249 16.4698 9.74318C16.51 9.12053 16.51 8.47568 16.4698 7.85303C16.2642 4.67129 13.7652 2.13685 10.6279 1.9283C9.55762 1.85716 8.4402 1.85731 7.37205 1.9283C4.23479 2.13685 1.73581 4.67129 1.53018 7.85303C1.48994 8.47568 1.48994 9.12053 1.53018 9.74318C1.60507 10.902 2.11757 11.975 2.72093 12.881C3.07126 13.5152 2.84005 14.3069 2.47516 14.9984C2.21206 15.497 2.08051 15.7462 2.18613 15.9263C2.29176 16.1064 2.52769 16.1122 2.99957 16.1236C3.93275 16.1464 4.56201 15.8818 5.06151 15.5135C5.3448 15.3046 5.48645 15.2001 5.58408 15.1881C5.6817 15.1761 5.87383 15.2552 6.25801 15.4135C6.6033 15.5557 7.00422 15.6434 7.37205 15.6679C8.4402 15.7389 9.55762 15.739 10.6279 15.6679Z"
+                                                                    stroke="#3666EE" stroke-width="1.125"
+                                                                    stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                        <div class="assit_content">
+                                                            <h5 class="assit_heading">Auto message after reply detected
+                                                            </h5>
+                                                            <p>AI auto-replies to leads who message you back</p>
+                                                        </div>
+                                                        <label class="switch">
+                                                            <input type="checkbox">
+                                                            <span class="slider round"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="assit_item">
+                                                        <span class="assit_icon">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M9.75 6.375H10.125V3.52226C10.125 3.23382 10.3588 3 10.6472 3C10.7925 3 10.9312 3.06046 11.03 3.16689L15.4948 7.9752C15.6589 8.15183 15.75 8.38395 15.75 8.625C15.75 8.86605 15.6589 9.09817 15.4948 9.2748L11.03 14.0831C10.9312 14.1896 10.7925 14.25 10.6472 14.25C10.3588 14.25 10.125 14.0161 10.125 13.7278V10.875C5.95916 10.875 3.71016 13.8872 3.14399 14.7635C3.05053 14.9082 2.89285 15 2.72063 15C2.46071 15 2.25 14.7893 2.25 14.5294V13.875C2.25 9.7329 5.60786 6.375 9.75 6.375Z"
+                                                                    stroke="#3666EE" stroke-width="1.125"
+                                                                    stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                        <div class="assit_content">
+                                                            <h5 class="assit_heading">Auto handle leads after <span
+                                                                    class="heading_icon">2</span> Follow-ups
+                                                            </h5>
+                                                            <p>AI takes over after two follow-ups.</p>
+                                                        </div>
+                                                        <label class="switch">
+                                                            <input type="checkbox">
+                                                            <span class="slider round"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="color_strip"></div>
+                        </div>
+                        <div class="event_box">
+                            <div class="event_head">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="check_1">
+                                    <label for="check_1">Select events to trigger zapier</label>
+                                    <span class="info_icon">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.83333 12.6667C10.055 12.6667 12.6667 10.055 12.6667 6.83333C12.6667 3.61167 10.055 1 6.83333 1C3.61167 1 1 3.61167 1 6.83333C1 10.055 3.61167 12.6667 6.83333 12.6667Z"
+                                                stroke="#6D6B77" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M6.83203 9.45898V6.83398" stroke="#6D6B77" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M6.83203 4.50924V4.50195" stroke="#6D6B77" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="event_body">
+                                <div class="flex_box">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="check_2">
+                                        <label for="check_2" class="form_label">Response received</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="check_3">
+                                        <label for="check_3" class="form_label">Invite sent</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="check_4">
+                                        <label for="check_4" class="form_label">Invitation accepted</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="check_5">
+                                        <label for="check_5" class="form_label">Invitation withdrawn</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="check_6">
+                                        <label for="check_6" class="form_label">Followup Sent</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event_footer">
+                                <div class="flex_box">
+                                    <span class="box_heading">Works With</span>
+                                    <div class="partner_logo">
+                                        <span class="logo_img">
+                                            <img src="assets/image/partner-logo1.png" class="img-fluid"
+                                                alt="partner-logo1">
+                                        </span>
+                                        <span class="logo_img">
+                                            <img src="assets/image/partner-logo2.png" class="img-fluid"
+                                                alt="partner-logo1">
+                                        </span>
+                                        <span class="logo_img">
+                                            <img src="assets/image/partner-logo3.png" class="img-fluid"
+                                                alt="partner-logo1">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text_para mb-3">If a lead answers your invite, message, or InMail, we stop sending further
+                        steps automatically. <a href="">Learn more</a> </p>
+                    <div class="previous previous_btn ms-auto mb-3">
+                        <span class="btn_icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.10431 2.625H9.38565C11.1979 2.625 12.667 4.09411 12.667 5.90634C12.667 7.71859 11.1979 9.18768 9.38565 9.18768H1"
+                                    stroke="#3666EE" stroke-width="1.09378" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M3.18755 7C3.18755 7 1.00001 8.61114 1 9.18756C0.999993 9.76406 3.18756 11.3751 3.18756 11.3751"
+                                    stroke="#3666EE" stroke-width="1.09378" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="btn_text ">Previous</span>
+                    </div>
+                    <div class="next btn_secondary mb-3">next</div>
+                </fieldset>
+                <fieldset class="csmt_fieldset">
+                    <div class="field_box ps-0">
+                        <div class="NoStatus_box">
+                            <figure class="box_img">
+                                <img src="assets/image/no-status.png" class="img-fluid" alt="Box_img">
+                            </figure>
+                            <h3 class="status_heading">No Stats Yet</h3>
+                            <p>Once Campaign is launched, Statistics will be shown here.</p>
+                            <a href="" class="btn_secondary">
+                                <span class="btn_icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.8013 6.48949L13.2869 5.00392C14.9596 3.3312 17.1495 2.63737 19.4671 2.52399C20.3686 2.47989 20.8193 2.45784 21.1807 2.81928C21.5422 3.18071 21.5201 3.63143 21.476 4.53289C21.3626 6.8505 20.6688 9.04042 18.9961 10.7131L17.5105 12.1987C16.2871 13.4221 15.9393 13.77 16.1961 15.097C16.4496 16.1107 16.6949 17.0923 15.9578 17.8294C15.0637 18.7235 14.2481 18.7235 13.354 17.8294L6.17058 10.646C5.27649 9.75188 5.27646 8.9363 6.17058 8.04219C6.90767 7.30509 7.88929 7.55044 8.90297 7.80389C10.23 8.06073 10.5779 7.71289 11.8013 6.48949Z"
+                                            stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                                        <path d="M16.9961 7H17.0051" stroke="white" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M2.5 21.5L7.5 16.5" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                        <path d="M8.5 21.5L10.5 19.5" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                        <path d="M2.5 15.5L4.5 13.5" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                    </svg>
+
+                                </span>
+                                <span class="btn_text">Launch Campaign </span>
+                            </a>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+        <!-- content-wrapper-end -->
+    </main>
+    <!-- main-wrapper-end -->
+
+    <!-- body-overlay-start -->
+    <div class="body_overloay"></div>
+    <!-- body-overlay-end -->
+
+    <!-- looklike-modal-start -->
+    <div class="modal fade csmt_modal" id="look_like" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="head_left">
+                        <h1 class="modal-title" id="staticBackdropLabel">Lookalikes</h1>
+                        <p>Select a lookalike list for this campaign</p>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z"
+                                stroke="#64748B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M14.9994 15L9 9M9.00064 15L15 9" stroke="#64748B" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="Noleads_card">
+                        <h3 class="lead_heading">You don’t have any leads</h3>
+                        <p>Create a lead list to start running campaigns</p>
+                        <a href="" class="btn-all">Creat a List</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- looklike-modal-end -->
+
+    <!-- jQuery-min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!--bootstrap-5.0.2-js-->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- style.js -->
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
